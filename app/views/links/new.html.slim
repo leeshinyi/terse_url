@@ -1,0 +1,9 @@
+div.text-center
+  h1 Shorten Your URL
+
+  = simple_form_for :links, url: links_create_path, html: {class: 'form-horizontal'}  do |f|
+    .form-inputs
+      = f.input :address, class: 'form-control'
+    br
+    .form-actions
+      = f.submit 'Keep It Short'
