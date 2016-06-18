@@ -10,4 +10,4 @@ div.text-center
 
   br    
   - if flash[:slug].present?
-    = link_to @link.shorten_url, @link.address, target: "_blank"
+    = link_to @link.shorten_url, @link.shorten_url, target: "_blank"
