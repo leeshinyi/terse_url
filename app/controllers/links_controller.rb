@@ -21,7 +21,10 @@ class LinksController < ApplicationController
   end
 
   def show
-
+    link = Link.find_by(slug: params[:slug])
+    respond_to do |format|
+      format.html { redirect_to link.address }
+    end
   end
 
   private

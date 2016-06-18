@@ -7,3 +7,7 @@ div.text-center
     br
     .form-actions
       = f.submit 'Keep It Short'
+
+  br    
+  - if flash[:slug].present?
+    = link_to @link.shorten_url, @link.address, target: "_blank"
